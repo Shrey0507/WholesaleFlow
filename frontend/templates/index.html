@@ -1,0 +1,203 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | WholesaleFlow{% endblock %}
+
+{% block content %}
+
+<div class="container-fluid px-4 py-4">
+
+    <div class="dashboard-header mb-4">
+        <div>
+            <p class="eyebrow">WHOLESALE MANAGEMENT</p>
+
+            <h1>Good evening.</h1>
+
+            <p class="subtitle">
+                Here's an overview of your wholesale operations.
+            </p>
+        </div>
+
+        <button class="btn btn-primary">
+            + New Order
+        </button>
+    </div>
+
+
+    <!-- Statistics -->
+
+    <div class="row g-4 mb-4">
+
+        <div class="col-md-6 col-xl-3">
+            <div class="stat-card">
+                <span class="stat-label">Total Stock</span>
+                <h2>245</h2>
+                <span class="stat-positive">Items available</span>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="stat-card">
+                <span class="stat-label">Orders</span>
+                <h2>128</h2>
+                <span class="stat-positive">This month</span>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="stat-card">
+                <span class="stat-label">Pending Payments</span>
+                <h2>₹42,800</h2>
+                <span class="stat-warning">Needs attention</span>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-xl-3">
+            <div class="stat-card">
+                <span class="stat-label">Monthly Profit</span>
+                <h2>₹86,450</h2>
+                <span class="stat-positive">+12.4%</span>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Main content -->
+
+    <div class="row g-4">
+
+        <div class="col-lg-8">
+
+            <div class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h5>Recent Orders</h5>
+                        <p>Latest wholesale orders</p>
+                    </div>
+
+                    <a href="#">View all</a>
+                </div>
+
+                <div class="table-responsive">
+
+                    <table class="table align-middle">
+
+                        <thead>
+                            <tr>
+                                <th>Order</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>#ORD-004</td>
+                                <td>Green Basket</td>
+                                <td>05 Oct 2026</td>
+                                <td>₹3,960</td>
+                                <td>
+                                    <span class="status pending">
+                                        Placed
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-003</td>
+                                <td>City Supermarket</td>
+                                <td>04 Oct 2026</td>
+                                <td>₹3,580</td>
+                                <td>
+                                    <span class="status pending">
+                                        Placed
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-002</td>
+                                <td>Daily Needs Store</td>
+                                <td>02 Oct 2026</td>
+                                <td>₹2,160</td>
+                                <td>
+                                    <span class="status delivered">
+                                        Delivered
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>#ORD-001</td>
+                                <td>Fresh Mart</td>
+                                <td>01 Oct 2026</td>
+                                <td>₹3,500</td>
+                                <td>
+                                    <span class="status delivered">
+                                        Delivered
+                                    </span>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-4">
+
+            <div class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h5>Low Stock</h5>
+                        <p>Items requiring attention</p>
+                    </div>
+                </div>
+
+                <div class="stock-item">
+                    <div>
+                        <strong>Cooking Oil 15L</strong>
+                        <small>8 units remaining</small>
+                    </div>
+
+                    <span class="stock-danger">Low</span>
+                </div>
+
+                <div class="stock-item">
+                    <div>
+                        <strong>Toor Dal 10kg</strong>
+                        <small>12 units remaining</small>
+                    </div>
+
+                    <span class="stock-danger">Low</span>
+                </div>
+
+                <div class="stock-item">
+                    <div>
+                        <strong>Sugar 25kg</strong>
+                        <small>50 units remaining</small>
+                    </div>
+
+                    <span class="stock-good">Healthy</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
